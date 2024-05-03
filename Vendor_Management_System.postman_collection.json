@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "f5e2eca5-133f-47b3-a78f-601ce56ba23b",
+		"name": "Vendor_Management_System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32993170"
+	},
+	"item": [
+		{
+			"name": "Create vendors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sample Vendor12\",\r\n    \"contact_details\": \"sample12@example.com\",\r\n    \"address\": \"124 Main St, City, Country\",\r\n    \"vendor_code\": \"VENDOR125\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000//vendors/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"vendors",
+						"create",
+						""
+					]
+				},
+				"description": "Creates a new vendor"
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor performance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/vendors/2/performance/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"vendors",
+						"2",
+						"performance",
+						""
+					]
+				},
+				"description": "Retrieves the performance metrics for a specific vendor."
+			},
+			"response": []
+		},
+		{
+			"name": "purchase_orders update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"po_number\": \"PO126\",\r\n    \"vendor\": 2,\r\n    \"order_date\": \"2024-05-03T10:00:00\",\r\n    \"delivery_date\": \"2024-05-08T10:00:00\",\r\n    \"items\": [\"Item7\", \"Item9\"],\r\n    \"quantity\": 10,\r\n    \"status\": \"completed\",\r\n    \"quality_rating\": 2.5,\r\n    \"acknowledgment_date\": \"2024-05-04T10:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/purchase_orders/5/update/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"purchase_orders",
+						"5",
+						"update",
+						""
+					]
+				},
+				"description": "Updates details of a specific purchase order."
+			},
+			"response": []
+		},
+		{
+			"name": "Vendors update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sample Vendor125\",\r\n    \"contact_details\": \"sample125@example.com\",\r\n    \"address\": \"1245 Main St, City, Country\",\r\n    \"vendor_code\": \"VENDOR1255\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/vendors/1/update/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"vendors",
+						"1",
+						"update",
+						""
+					]
+				},
+				"description": "Updates details of a specific vendor."
+			},
+			"response": []
+		},
+		{
+			"name": "purchase_orders create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"po_number\": \"PO-12345\",\r\n   \"vendor\": 1,\r\n   \"order_date\": \"2024-05-03\",\r\n   \"delivery_date\": \"2024-05-10\",\r\n   \"items\": \"Item 1, Item 2\",\r\n   \"quantity\": 10,\r\n   \"status\": \"pending\",\r\n   \"quality_rating\": 4.5,\r\n   \"acknowledgment_date\": \"2024-05-05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/purchase_orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"purchase_orders",
+						""
+					]
+				},
+				"description": "Creates a new purchase order."
+			},
+			"response": []
+		},
+		{
+			"name": "Vendors delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/vendors/<vendor_id>/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"vendors",
+						"<vendor_id>",
+						"delete",
+						""
+					]
+				},
+				"description": "Deletes a specific vendor."
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase_orders delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/purchase_orders/<po_id>/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"purchase_orders",
+						"<po_id>",
+						"delete",
+						""
+					]
+				},
+				"description": "Deletes a specific purchase order."
+			},
+			"response": []
+		},
+		{
+			"name": "vendors Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/vendors/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"vendors",
+						""
+					]
+				},
+				"description": "Retrieves a list of all vendors"
+			},
+			"response": []
+		},
+		{
+			"name": "specific vendors  details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/vendors/<vendor_id>/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"vendors",
+						"<vendor_id>",
+						""
+					]
+				},
+				"description": "Retrieves details of a specific vendor."
+			},
+			"response": []
+		},
+		{
+			"name": "Specific purchase_order detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/purchase_orders/<int:po_id>/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"purchase_orders",
+						"<int:po_id>",
+						""
+					]
+				},
+				"description": "Retrieves details of a specific purchase order."
+			},
+			"response": []
+		},
+		{
+			"name": "List purchase_orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/purchase_order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"purchase_order"
+					]
+				},
+				"description": "Retrieves a list of all purchase orders."
+			},
+			"response": []
+		}
+	]
+}

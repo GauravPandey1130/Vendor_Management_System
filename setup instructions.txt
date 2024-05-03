@@ -1,0 +1,5 @@
+1. Prerequisites:
+Python: Make sure you have Python installed on your system. You can download it from the official Python website.
+Django: The API is built using Django, so you'll need to install Django using pip. You can install it using pip install django.
+Django Rest Framework: The API uses Django Rest Framework for building RESTful APIs. Install it using pip install djangorestframework.
+Database: Ensure you have a database installed and configured. By default, Django uses SQLite, but you can configure it to use other databases like PostgreSQL, MySQL, etc.
